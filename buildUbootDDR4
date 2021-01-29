@@ -1,0 +1,8 @@
+export ARCH=arm64
+export CROSS_COMPILE=/users/sdk/toolchain/marvell-tools-249.0/bin/aarch64-marvell-linux-gnu-
+cd uboot-2019.10-SDK-10.3.5.0-PR1
+make mrproper
+make mvebu_db-88f3720_defconfig
+#make DEVICE_TREE=armada-3720-espressobin-emmc
+make DEVICE_TREE=armada-3720-espressobin
+cd ..

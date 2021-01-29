@@ -1,0 +1,8 @@
+export CROSS_COMPILE=/users/sdk/toolchain/marvell-tools-249.0/bin/aarch64-marvell-linux-gnu-
+cd atf-v2.2-SDK-10.3.5.0-PR1
+export BL33=/home/erez/marvell/sdk_10.3.5.0-pr1/manualBuild/uboot-2019.10-SDK-10.3.5.0-PR1/u-boot.bin
+export WTP=/home/erez/marvell/sdk_10.3.5.0-pr1/manualBuild/a3700_utils-SDK-10.3.5.0-PR1/
+export MV_DDR_PATH=/home/erez/marvell/sdk_10.3.5.0-pr1/manualBuild/mv_ddr-SDK-10.3.5.0-PR1/
+make distclean
+make DDR_TYPE=DDR4 USE_COHERENT_MEM=0 BOOTDEV=SPINOR  PARTNUM=0 LOG_LEVEL=20 DDR_TOPOLOGY=5 CLOCKSPRESET=CPU_800_DDR_800  PLAT=a3700 all fip
+cd ..

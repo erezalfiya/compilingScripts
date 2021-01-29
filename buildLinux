@@ -1,0 +1,6 @@
+export ARCH=arm64
+export CROSS_COMPILE=/users/sdk/toolchain/marvell-tools-249.0/bin/aarch64-marvell-linux-gnu-
+cd linux-4.14.76-SDK-10.3.4.0-PR4
+make marvell_v8_sdk_defconfig
+make
+cd ..
